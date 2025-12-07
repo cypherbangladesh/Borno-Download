@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Borno – Download APK</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+      background: #ffffff;
+      color: #1a1a1a;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    
+    header {
+      background: #ffffff;
+      border-bottom: 1px solid #e5e5e5;
+      padding: 16px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(8px);
+      background: rgba(255, 255, 255, 0.95);
+    }
+    
+    .header-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    
+    .logo {
+      font-size: 24px;
+      font-weight: 600;
+      color: #1a1a1a;
+      letter-spacing: -0.5px;
+    }
+    
+    .version {
+      font-size: 13px;
+      color: #666;
+      font-weight: 500;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    .hero {
+      padding: 60px 0 40px;
+      text-align: center;
+    }
+    
+    .hero h1 {
+      font-size: 42px;
+      font-weight: 700;
+      margin-bottom: 16px;
+      letter-spacing: -1px;
+      color: #1a1a1a;
+    }
+    
+    .hero p {
+      font-size: 18px;
+      color: #666;
+      margin-bottom: 32px;
+      font-weight: 400;
+    }
+    
+    .download-button {
+      display: inline-block;
+      background: #1a1a1a;
+      color: #ffffff;
+      padding: 16px 48px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 600;
+      transition: all 0.2s ease;
+      border: 2px solid #1a1a1a;
+    }
+    
+    .download-button:active {
+      transform: scale(0.98);
+      background: #000000;
+    }
+    
+    .app-preview {
+      margin: 60px 0;
+      padding: 60px 40px;
+      background: #f8f8f8;
+      border-radius: 12px;
+      text-align: center;
+    }
+    
+    .app-icon-display {
+      width: 120px;
+      height: 120px;
+      background: #1a1a1a;
+      margin: 0 auto 24px;
+      border-radius: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 56px;
+    }
+    
+    .features {
+      padding: 40px 0 60px;
+    }
+    
+    .section-title {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 40px;
+      text-align: center;
+      letter-spacing: -0.5px;
+    }
+    
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      margin-bottom: 60px;
+    }
+    
+    .feature-card {
+      padding: 32px 24px;
+      background: #ffffff;
+      border: 1px solid #e5e5e5;
+      border-radius: 8px;
+    }
+    
+    .feature-card h3 {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 12px;
+      color: #1a1a1a;
+    }
+    
+    .feature-card p {
+      font-size: 15px;
+      color: #666;
+      line-height: 1.6;
+    }
+    
+    .install-section {
+      background: #f8f8f8;
+      padding: 60px 40px;
+      border-radius: 12px;
+      margin-bottom: 60px;
+    }
+    
+    .install-section h2 {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 32px;
+      letter-spacing: -0.5px;
+    }
+    
+    .install-step {
+      margin-bottom: 24px;
+      display: flex;
+      gap: 20px;
+    }
+    
+    .step-num {
+      width: 32px;
+      height: 32px;
+      background: #1a1a1a;
+      color: #ffffff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      font-size: 15px;
+      flex-shrink: 0;
+    }
+    
+    .step-text {
+      flex: 1;
+      padding-top: 4px;
+    }
+    
+    .step-text p {
+      font-size: 16px;
+      color: #1a1a1a;
+      line-height: 1.6;
+    }
+    
+    .notice {
+      background: #fffbeb;
+      border: 1px solid #fbbf24;
+      padding: 20px 24px;
+      border-radius: 8px;
+      margin: 40px 0;
+    }
+    
+    .notice h4 {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: #92400e;
+    }
+    
+    .notice p {
+      font-size: 14px;
+      color: #78350f;
+      line-height: 1.6;
+    }
+    
+    footer {
+      border-top: 1px solid #e5e5e5;
+      padding: 40px 20px;
+      text-align: center;
+      color: #666;
+      font-size: 14px;
+    }
+    
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 32px;
+      }
+      
+      .hero p {
+        font-size: 16px;
+      }
+      
+      .hero {
+        padding: 40px 0 32px;
+      }
+      
+      .app-preview {
+        padding: 40px 24px;
+        margin: 40px 0;
+      }
+      
+      .features-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .section-title {
+        font-size: 24px;
+      }
+      
+      .install-section {
+        padding: 40px 24px;
+      }
+      
+      .install-section h2 {
+        font-size: 24px;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      header {
+        padding: 14px 16px;
+      }
+      
+      .logo {
+        font-size: 20px;
+      }
+      
+      .container {
+        padding: 0 16px;
+      }
+      
+      .hero h1 {
+        font-size: 28px;
+      }
+      
+      .download-button {
+        padding: 14px 36px;
+        font-size: 15px;
+        width: 100%;
+        max-width: 300px;
+      }
+      
+      .app-icon-display {
+        width: 100px;
+        height: 100px;
+        font-size: 48px;
+      }
+      
+      .feature-card {
+        padding: 24px 20px;
+      }
+    }
+    
+    @media (hover: hover) {
+      .download-button:hover {
+        background: #000000;
+        transform: translateY(-1px);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="header-content">
+      <div class="logo">Borno</div>
+      <div class="version">v1.0.0</div>
+    </div>
+  </header>
+
+  <div class="container">
+    <section class="hero">
+      <h1>Smart Printing Assistant</h1>
+      <p>Fast, simple, and efficient printing for your mobile device</p>
+      <a href="./borno-v1.0.0.apk" class="download-button" download>Download APK</a>
+    </section>
+
+    <div class="app-preview">
+      <div class="app-icon-display">🖨️</div>
+      <h3 style="font-size: 20px; font-weight: 600; margin-bottom: 8px;">Latest Release</h3>
+      <p style="color: #666; font-size: 15px;">Version 1.0.0 • Compatible with Android 5.0+</p>
+    </div>
+
+    <section class="features">
+      <h2 class="section-title">Features</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <h3>Optimized Performance</h3>
+          <p>Designed for speed and efficiency, ensuring your printing tasks are completed quickly without delays.</p>
+        </div>
+        
+        <div class="feature-card">
+          <h3>Clean Interface</h3>
+          <p>Intuitive design that makes printing straightforward with minimal steps and clear navigation.</p>
+        </div>
+        
+        <div class="feature-card">
+          <h3>Reliable Operation</h3>
+          <p>Built with stability in mind to handle your documents securely and consistently.</p>
+        </div>
+        
+        <div class="feature-card">
+          <h3>Mobile First</h3>
+          <p>Specifically crafted for mobile devices, providing a seamless experience on smartphones and tablets.</p>
+        </div>
+      </div>
+
+      <div class="install-section">
+        <h2>Installation Instructions</h2>
+        
+        <div class="install-step">
+          <div class="step-num">1</div>
+          <div class="step-text">
+            <p>Download the APK file by tapping the button above</p>
+          </div>
+        </div>
+        
+        <div class="install-step">
+          <div class="step-num">2</div>
+          <div class="step-text">
+            <p>Open the file from your notification panel or file manager</p>
+          </div>
+        </div>
+        
+        <div class="install-step">
+          <div class="step-num">3</div>
+          <div class="step-text">
+            <p>If prompted, enable "Install from Unknown Sources" in your device settings</p>
+          </div>
+        </div>
+        
+        <div class="install-step">
+          <div class="step-num">4</div>
+          <div class="step-text">
+            <p>Complete the installation by following the on-screen prompts</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="notice">
+        <h4>Security Notice</h4>
+        <p>Since this app is distributed outside the Google Play Store, Android will request permission to install from unknown sources. This is a standard security measure for external APK installations.</p>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <p>© 2025 Borno. All rights reserved.</p>
+  </footer>
+</body>
+</html>
+
+<!-- git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/cypherbangladesh/Borno-Download.git
+git push -u origin main -->
